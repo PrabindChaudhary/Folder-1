@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 11 Computer Science</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #576574;
+            transition: background 0.3s;
+        }
+        .sidebar ul li:hover {
+            background-color: #34495e;
+        }
+        .content {
+            width: 75%;
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Class 11 Computer Science</h2>
+        <ul>
+            <li onclick="showChapter('ch1')">1. Introduction to Computer</li>
+            <li onclick="showChapter('ch2')">2. Computer Software</li>
+            <li onclick="showChapter('ch3')">3. Number System</li>
+            <li onclick="showChapter('ch4')">4. Boolean Algebra</li>
+            <li onclick="showChapter('ch5')">5. Computer Architecture</li>
+            <li onclick="showChapter('ch6')">6. Programming Concepts</li>
+            <li onclick="showChapter('ch7')">7. Operating System</li>
+            <li onclick="showChapter('ch8')">8. Networking and Internet</li>
+        </ul>
+    </div>
+    <div class="content" id="chapterContent">
+        <h2>Welcome to Class 11 Computer Science</h2>
+        <p>Select a chapter from the left to view its content.</p>
+    </div>
+    
+    <script>
+        function showChapter(chapter) {
+            const chapters = {
+                ch1: `<h2>Introduction to Computer</h2>
+                      <p>A computer is an electronic device that processes data based on a set of instructions known as a program. It consists of hardware and software, working together to perform complex calculations and tasks.</p>
+                      <h3>Generations of Computers</h3>
+                      <p>Computers have evolved over five generations, each marked by significant technological advancements.</p>
+                      <h3>Applications of Computers</h3>
+                      <p>Computers are used in education, healthcare, business, science, and entertainment. They enhance efficiency and accuracy in various fields.</p>
+                      <h3>Components of a Computer</h3>
+                      <p>Computers consist of input devices (keyboard, mouse), processing units (CPU), storage devices (HDD, SSD), and output devices (monitor, printer).</p>
+                      <h3>Advantages of Computers</h3>
+                      <p>Computers provide speed, automation, accuracy, communication, multitasking, and data storage capabilities.</p>` ,
+                ch2: `<h2>Computer Software</h2>
+                      <p>Software refers to a collection of programs that instruct a computer to perform tasks. It bridges the gap between the user and the hardware.</p>
+                      <h3>Types of Software</h3>
+                      <p>Software is categorized into System software, Application software, and Programming software.</p>
+                      <h3>System Software</h3>
+                      <p>Includes operating systems (Windows, Linux, macOS) and utility programs that manage hardware and system resources.</p>
+                      <h3>Application Software</h3>
+                      <p>Includes programs like word processors, web browsers, and media players that help users perform specific tasks.</p>
+                      <h3>Software Development</h3>
+                      <p>Software development follows the Software Development Life Cycle (SDLC), which includes planning, designing, coding, testing, and deployment.</p>` ,
+                ch3: `<h2>Number System</h2>
+                      <p>The number system is a method of representing numbers in different bases, crucial for computing.</p>
+                      <h3>Types of Number Systems</h3>
+                      <p>Binary (Base-2), Decimal (Base-10), Octal (Base-8), Hexadecimal (Base-16).</p>
+                      <h3>Conversions</h3>
+                      <p>Converting between binary, decimal, octal, and hexadecimal systems is essential in computing.</p>
+                      <h3>Importance in Computing</h3>
+                      <p>Used in data representation, calculations, memory addressing, and programming languages.</p>` ,
+                ch4: `<h2>Boolean Algebra</h2>
+                      <p>Boolean Algebra is the mathematical foundation for digital circuit design and logical operations.</p>
+                      <h3>Boolean Operations</h3>
+                      <p>Basic operations include AND, OR, NOT, NAND, NOR, XOR, and XNOR.</p>
+                      <h3>Truth Tables</h3>
+                      <p>Used to analyze and design logic circuits.</p>` ,
+                ch5: `<h2>Computer Architecture</h2>
+                      <p>Computer Architecture defines the structure and behavior of a computer system.</p>
+                      <h3>Key Components</h3>
+                      <p>Includes CPU, Memory, Input/Output Devices.</p>
+                      <h3>Architecture Models</h3>
+                      <p>Von Neumann and Harvard architectures are commonly used.</p>` ,
+                ch6: `<h2>Programming Concepts</h2>
+                      <p>Programming is the process of writing instructions for a computer.</p>
+                      <h3>Programming Languages</h3>
+                      <p>Includes Procedural, Object-Oriented, Functional, and Scripting languages.</p>` ,
+                ch7: `<h2>Operating System</h2>
+                      <p>An OS manages computer resources and provides an interface for users.</p>
+                      <h3>Types of OS</h3>
+                      <p>Includes Single-user, Multi-user, and Network OS.</p>` ,
+                ch8: `<h2>Networking and Internet</h2>
+                      <p>Networking enables computers to share resources and communicate.</p>
+                      <h3>Types of Networks</h3>
+                      <p>LAN, WAN, MAN.</p>`
+            };
+            document.getElementById('chapterContent').innerHTML = chapters[chapter];
+        }
+    </script>
+</body>
+</html>
